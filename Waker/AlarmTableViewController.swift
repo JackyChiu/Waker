@@ -16,15 +16,32 @@ class AlarmTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AlarmCell")! as UITableViewCell
-        cell.backgroundColor = UIColor.clearColor()
+        //cell.backgroundColor = UIColor.clearColor()
         
+        //Transparent background
+        cell.backgroundColor = UIColor(red: 3/255, green: 69/255, blue: 121/255, alpha: 0.7)
         return cell
     }
     
+    override func viewDidAppear(animated: Bool) {
+        //Gets rid of extra cells lines
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+    }
+    
     override func viewDidLoad() {
+        //Sets background image
         let img = UIImage(named: "Background_big")
         self.view.backgroundColor = UIColor(patternImage: img!)
-        tableView.rowHeight = 60
-        tableView.separatorColor = UIColor.clearColor()
+        
+        //Sets row height
+        tableView.rowHeight = 75
+        
+        //tableView.separatorColor = UIColor.clearColor()
+    }
+    @IBAction func addAlarmButtonDidTouch(sender: AnyObject) {
+        performSegueWithIdentifier("AddAlarmSegue", sender: self)
+    }
+    @IBAction func MenuButtonDidTouch(sender: AnyObject) {
+        performSegueWithIdentifier("MenuSegue", sender: self)
     }
 }

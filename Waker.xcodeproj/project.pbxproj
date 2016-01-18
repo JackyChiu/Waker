@@ -16,6 +16,8 @@
 		14948A351C458AC400368D5F /* WakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948A341C458AC400368D5F /* WakerTests.swift */; };
 		14948A401C458AC400368D5F /* WakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948A3F1C458AC400368D5F /* WakerUITests.swift */; };
 		14A08C2F1C469830004CB01D /* AlarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */; };
+		14DE314D1C4D77A2000B5AA9 /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE314C1C4D77A2000B5AA9 /* AddAlarmViewController.swift */; };
+		14DE314F1C4D78D0000B5AA9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE314E1C4D78D0000B5AA9 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		14948A3F1C458AC400368D5F /* WakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakerUITests.swift; sourceTree = "<group>"; };
 		14948A411C458AC400368D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableViewController.swift; sourceTree = "<group>"; };
+		14DE314C1C4D77A2000B5AA9 /* AddAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
+		14DE314E1C4D78D0000B5AA9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				14948A1C1C458AC400368D5F /* AppDelegate.swift */,
 				14948A1E1C458AC400368D5F /* ViewController.swift */,
 				14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */,
+				14DE314C1C4D77A2000B5AA9 /* AddAlarmViewController.swift */,
+				14DE314E1C4D78D0000B5AA9 /* MenuViewController.swift */,
 				14948A201C458AC400368D5F /* Main.storyboard */,
 				14948A261C458AC400368D5F /* Assets.xcassets */,
 				14948A281C458AC400368D5F /* LaunchScreen.storyboard */,
@@ -266,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				14948A251C458AC400368D5F /* Waker.xcdatamodeld in Sources */,
+				14DE314F1C4D78D0000B5AA9 /* MenuViewController.swift in Sources */,
 				14A08C2F1C469830004CB01D /* AlarmTableViewController.swift in Sources */,
+				14DE314D1C4D77A2000B5AA9 /* AddAlarmViewController.swift in Sources */,
 				14948A1F1C458AC400368D5F /* ViewController.swift in Sources */,
 				14948A1D1C458AC400368D5F /* AppDelegate.swift in Sources */,
 			);
