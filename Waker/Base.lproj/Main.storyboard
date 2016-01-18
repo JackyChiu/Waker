@@ -76,18 +76,54 @@
         <!--Alarms-->
         <scene sceneID="q7o-2h-A6B">
             <objects>
-                <tableViewController id="5OP-qS-Rui" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xk5-Gl-PTF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="5OP-qS-Rui" customClass="AlarmTableViewController" customModule="Waker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xk5-Gl-PTF">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aCc-AR-rpz">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmCell" rowHeight="60" id="aCc-AR-rpz">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aCc-AR-rpz" id="3y4-gt-f2B">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l37-zK-ocf">
+                                            <rect key="frame" x="103" y="15" width="21.5" height="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUu-oE-bu7">
+                                            <rect key="frame" x="20" y="0.0" width="75.5" height="35.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9AX-jj-ikG">
+                                            <rect key="frame" x="306" y="15" width="51" height="31"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weekdays" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPG-mu-AkF">
+                                            <rect key="frame" x="20" y="33" width="347" height="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="l37-zK-ocf" firstAttribute="leading" secondItem="zUu-oE-bu7" secondAttribute="trailing" constant="8" id="4Cn-85-DGI"/>
+                                        <constraint firstItem="9AX-jj-ikG" firstAttribute="top" secondItem="3y4-gt-f2B" secondAttribute="top" constant="15" id="BBb-eh-lJv"/>
+                                        <constraint firstItem="zUu-oE-bu7" firstAttribute="top" secondItem="3y4-gt-f2B" secondAttribute="top" id="G5y-UJ-Zzq"/>
+                                        <constraint firstAttribute="bottom" secondItem="9AX-jj-ikG" secondAttribute="bottom" constant="13.5" id="NYV-Fd-iai"/>
+                                        <constraint firstItem="gPG-mu-AkF" firstAttribute="leading" secondItem="3y4-gt-f2B" secondAttribute="leading" constant="20" id="UkP-GI-dTM"/>
+                                        <constraint firstItem="l37-zK-ocf" firstAttribute="top" secondItem="3y4-gt-f2B" secondAttribute="top" constant="15" id="fX9-OA-Sxv"/>
+                                        <constraint firstAttribute="trailing" secondItem="gPG-mu-AkF" secondAttribute="trailing" constant="8" id="pxI-C7-yDV"/>
+                                        <constraint firstAttribute="bottom" secondItem="gPG-mu-AkF" secondAttribute="bottom" constant="6.5" id="t8k-jV-fsm"/>
+                                        <constraint firstItem="zUu-oE-bu7" firstAttribute="leading" secondItem="3y4-gt-f2B" secondAttribute="leading" constant="20" id="waK-pg-aTv"/>
+                                        <constraint firstAttribute="trailing" secondItem="9AX-jj-ikG" secondAttribute="trailing" constant="20" id="waY-wy-5Rr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -96,7 +132,10 @@
                             <outlet property="delegate" destination="5OP-qS-Rui" id="TYU-e1-62W"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Alarms" id="eco-w2-niF"/>
+                    <navigationItem key="navigationItem" title="Alarms" id="eco-w2-niF">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="yYf-sE-Jta"/>
+                        <barButtonItem key="rightBarButtonItem" image="Fill Plus" id="vAb-Vx-6IU"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dN-zT-mlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,14 +148,15 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CaU-OZ-a3z" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Alarm" image="Light Alarm" id="X5k-6h-saf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mhg-vL-bxk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Mhg-vL-bxk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.86182689666748047" green="0.88991492986679077" blue="0.91487377882003784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                            <color key="textColor" red="0.16058573298429324" green="0.16058573298429324" blue="0.16058573298429324" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -130,8 +170,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Fill Plus" width="20" height="19"/>
         <image name="Light Alarm" width="32" height="32"/>
         <image name="Light Bar" width="26" height="32"/>
         <image name="Light Gear" width="30" height="30"/>
+        <image name="Menu" width="22" height="16"/>
     </resources>
 </document>
