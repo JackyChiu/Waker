@@ -34,7 +34,7 @@ class AlarmTableViewController: UITableViewController {
         self.view.backgroundColor = UIColor(patternImage: img!)
         
         //Sets row height
-        tableView.rowHeight = 75
+        tableView.rowHeight = 90
         
         //tableView.separatorColor = UIColor.clearColor()
     }
