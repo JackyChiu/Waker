@@ -124,6 +124,7 @@
                                         </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9AX-jj-ikG">
                                             <rect key="frame" x="306" y="29" width="51" height="31"/>
+                                            <color key="onTintColor" red="0.43562141909134688" green="0.80521814569148886" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekdays" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPG-mu-AkF">
                                             <rect key="frame" x="15" y="60" width="340" height="21.5"/>
@@ -239,7 +240,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dX-8S-u23">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dX-8S-u23">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                             <connections>
                                                 <action selector="closeButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="hXb-Pt-JrR"/>
@@ -247,24 +248,90 @@
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-ZY-HyK" customClass="DesignableView" customModule="Waker" customModuleProvider="target">
                                             <rect key="frame" x="25" y="171" width="325" height="325"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.19468790292739868" green="0.23447641730308533" blue="0.28439772129058838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="25"/>
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86D-VO-1vy" customClass="DesignableView" customModule="Waker" customModuleProvider="target">
+                                            <rect key="frame" x="25" y="123" width="325" height="40"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft0-e1-9sP" customClass="DesignableButton" customModule="Waker" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="Cancel" image="noButton">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="cancelButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="YYn-oP-Mcb"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.40291355117992411" blue="0.43716416134051939" alpha="0.88561422413793101" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbf-Bm-RDL" customClass="DesignableView" customModule="Waker" customModuleProvider="target">
+                                            <rect key="frame" x="25" y="504" width="325" height="40"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anU-C1-QTP" customClass="DesignableButton" customModule="Waker" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="Create alarm" image="yesButton">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.61088781357835675" green="1" blue="0.51465394057601865" alpha="0.88561422413793101" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="anU-C1-QTP" secondAttribute="bottom" id="9YR-Yz-Y8m"/>
+                                                <constraint firstItem="anU-C1-QTP" firstAttribute="centerX" secondItem="Hbf-Bm-RDL" secondAttribute="centerX" id="9a2-9I-2Rj"/>
+                                                <constraint firstAttribute="trailing" secondItem="anU-C1-QTP" secondAttribute="trailing" id="LaK-4c-Xpe"/>
+                                                <constraint firstItem="anU-C1-QTP" firstAttribute="top" secondItem="Hbf-Bm-RDL" secondAttribute="top" id="UNV-3C-5dk"/>
+                                                <constraint firstItem="anU-C1-QTP" firstAttribute="leading" secondItem="Hbf-Bm-RDL" secondAttribute="leading" id="bJ3-le-h1r"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Hbf-Bm-RDL" secondAttribute="bottom" constant="123" id="85T-ta-BCq"/>
+                                        <constraint firstItem="Hbf-Bm-RDL" firstAttribute="leading" secondItem="mIV-rn-IYK" secondAttribute="leading" constant="25" id="9tG-SK-w4d"/>
                                         <constraint firstItem="PSk-ZY-HyK" firstAttribute="leading" secondItem="mIV-rn-IYK" secondAttribute="leading" constant="25" id="B2e-mu-ZJI"/>
-                                        <constraint firstItem="9dX-8S-u23" firstAttribute="top" secondItem="mIV-rn-IYK" secondAttribute="top" id="HE5-LD-FeR"/>
-                                        <constraint firstItem="9dX-8S-u23" firstAttribute="leading" secondItem="mIV-rn-IYK" secondAttribute="leading" id="SQh-5V-plo"/>
+                                        <constraint firstItem="Hbf-Bm-RDL" firstAttribute="top" secondItem="PSk-ZY-HyK" secondAttribute="bottom" constant="8" id="KZp-Sx-QwG"/>
+                                        <constraint firstItem="PSk-ZY-HyK" firstAttribute="top" secondItem="86D-VO-1vy" secondAttribute="bottom" constant="8" id="Mpz-Oe-yYb"/>
+                                        <constraint firstItem="86D-VO-1vy" firstAttribute="centerX" secondItem="mIV-rn-IYK" secondAttribute="centerX" id="Msw-8M-a62"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hbf-Bm-RDL" secondAttribute="trailing" constant="25" id="Plo-OA-Rql"/>
                                         <constraint firstAttribute="trailing" secondItem="PSk-ZY-HyK" secondAttribute="trailing" constant="25" id="WZU-IN-gUJ"/>
                                         <constraint firstAttribute="bottom" secondItem="PSk-ZY-HyK" secondAttribute="bottom" constant="171" id="YYH-fo-27Y"/>
                                         <constraint firstItem="PSk-ZY-HyK" firstAttribute="centerY" secondItem="mIV-rn-IYK" secondAttribute="centerY" id="Z4Y-dw-sU8"/>
-                                        <constraint firstAttribute="bottom" secondItem="9dX-8S-u23" secondAttribute="bottom" id="glW-i1-1gd"/>
-                                        <constraint firstAttribute="trailing" secondItem="9dX-8S-u23" secondAttribute="trailing" id="ttH-tc-lbp"/>
+                                        <constraint firstAttribute="trailing" secondItem="86D-VO-1vy" secondAttribute="trailing" constant="25" id="aSQ-Om-ju0"/>
+                                        <constraint firstItem="Hbf-Bm-RDL" firstAttribute="centerX" secondItem="mIV-rn-IYK" secondAttribute="centerX" id="cDe-yb-20h"/>
+                                        <constraint firstItem="86D-VO-1vy" firstAttribute="top" secondItem="mIV-rn-IYK" secondAttribute="top" constant="123" id="cN4-Ec-pA8"/>
                                         <constraint firstItem="PSk-ZY-HyK" firstAttribute="top" secondItem="mIV-rn-IYK" secondAttribute="top" constant="171" id="ttJ-Op-PFi"/>
+                                        <constraint firstItem="86D-VO-1vy" firstAttribute="leading" secondItem="mIV-rn-IYK" secondAttribute="leading" constant="25" id="ybC-qk-ZnZ"/>
                                         <constraint firstItem="PSk-ZY-HyK" firstAttribute="centerX" secondItem="mIV-rn-IYK" secondAttribute="centerX" id="yfG-q7-1lB"/>
                                     </constraints>
                                 </view>
@@ -279,6 +346,10 @@
                             <constraint firstItem="Hj3-68-Hbk" firstAttribute="top" secondItem="e0N-56-ByM" secondAttribute="top" id="m2P-JU-aJ4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="Ft0-e1-9sP" id="EOW-uJ-OVV"/>
+                        <outlet property="cancelView" destination="86D-VO-1vy" id="ncQ-vw-Bnk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jke-Dw-6gb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,5 +388,7 @@
         <image name="Light Bar" width="26" height="32"/>
         <image name="Light Gear" width="30" height="30"/>
         <image name="Menu" width="22" height="16"/>
+        <image name="noButton" width="32" height="32"/>
+        <image name="yesButton" width="32" height="32"/>
     </resources>
 </document>

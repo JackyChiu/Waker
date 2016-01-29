@@ -11,15 +11,16 @@ import UIKit
 class AlarmTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int)->Int{
+        // Returns 1 default cell for testing
         return 1
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AlarmCell")! as UITableViewCell
-        //cell.backgroundColor = UIColor.clearColor()
         
-        //Transparent background
+        let cell = tableView.dequeueReusableCellWithIdentifier("AlarmCell")! as UITableViewCell
+        //Transparent background to match background colour
         cell.backgroundColor = UIColor(red: 3/255, green: 69/255, blue: 121/255, alpha: 0.7)
+        
         return cell
     }
     
@@ -38,9 +39,11 @@ class AlarmTableViewController: UITableViewController {
         
         //tableView.separatorColor = UIColor.clearColor()
     }
+    
     @IBAction func addAlarmButtonDidTouch(sender: AnyObject) {
         performSegueWithIdentifier("AddAlarmSegue", sender: self)
     }
+    
     @IBAction func MenuButtonDidTouch(sender: AnyObject) {
         performSegueWithIdentifier("MenuSegue", sender: self)
     }
