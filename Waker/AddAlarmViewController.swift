@@ -3,7 +3,7 @@
 //  Waker
 //
 //  Created by Jacky Chiu on 2016-01-18.
-//  Copyright © 2016 Jacky Chiu. All rights reserved.
+//  Copyright © 2016 Jacky Chiu.
 //
 
 import UIKit
@@ -11,7 +11,10 @@ import UIKit
 class AddAlarmViewController: UIViewController {
 
     @IBOutlet weak var cancelView: DesignableView!
-    @IBOutlet weak var cancelButton: SpringButton!
+    @IBOutlet weak var cancelButton: DesignableButton!
+    @IBOutlet weak var createAlarmView: DesignableView!
+    @IBOutlet weak var createAlarmButton: DesignableButton!
+    @IBOutlet weak var timePicker: UIDatePicker!
     
     @IBAction func closeButtonDidTouch(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -21,11 +24,20 @@ class AddAlarmViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        cancelView.animation = "shake"
+    override func viewWillAppear(animated: Bool) {
+        cancelView.animation = "slideRight"
+        cancelView.damping = 0.9
+        cancelButton.animation = "slideRight"
+        cancelButton.damping = 0.9
         cancelView.animate()
-        cancelButton.animation = "shake"
         cancelButton.animate()
+        
+        
+        createAlarmView.animation = "slideLeft"
+        createAlarmView.damping = 0.9
+        createAlarmButton.animation = "slideLeft"
+        createAlarmButton.damping = 0.9
+        createAlarmView.animate()
+        createAlarmButton.animate()
     }
 }

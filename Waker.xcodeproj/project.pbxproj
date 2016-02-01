@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143440B31C5BA6F9000392CC /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143440B21C5BA6F9000392CC /* AlarmTableViewCell.swift */; };
 		14948A1D1C458AC400368D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948A1C1C458AC400368D5F /* AppDelegate.swift */; };
-		14948A1F1C458AC400368D5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948A1E1C458AC400368D5F /* ViewController.swift */; };
 		14948A221C458AC400368D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14948A201C458AC400368D5F /* Main.storyboard */; };
 		14948A251C458AC400368D5F /* Waker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14948A231C458AC400368D5F /* Waker.xcdatamodeld */; };
 		14948A271C458AC400368D5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14948A261C458AC400368D5F /* Assets.xcassets */; };
@@ -16,6 +16,7 @@
 		14948A351C458AC400368D5F /* WakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948A341C458AC400368D5F /* WakerTests.swift */; };
 		14948A401C458AC400368D5F /* WakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948A3F1C458AC400368D5F /* WakerUITests.swift */; };
 		14A08C2F1C469830004CB01D /* AlarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */; };
+		14A7EA431C5FAACF00A57159 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A7EA421C5FAACF00A57159 /* Alarm.swift */; };
 		14CDFCEB1C5AA1D90059AC9A /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDFCCD1C5AA1D90059AC9A /* AsyncButton.swift */; };
 		14CDFCEC1C5AA1D90059AC9A /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDFCCE1C5AA1D90059AC9A /* AsyncImageView.swift */; };
 		14CDFCED1C5AA1D90059AC9A /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDFCCF1C5AA1D90059AC9A /* AutoTextView.swift */; };
@@ -67,9 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		143440B21C5BA6F9000392CC /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 		14948A191C458AC400368D5F /* Waker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14948A1C1C458AC400368D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14948A1E1C458AC400368D5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		14948A211C458AC400368D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14948A241C458AC400368D5F /* Waker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Waker.xcdatamodel; sourceTree = "<group>"; };
 		14948A261C458AC400368D5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		14948A3F1C458AC400368D5F /* WakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakerUITests.swift; sourceTree = "<group>"; };
 		14948A411C458AC400368D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableViewController.swift; sourceTree = "<group>"; };
+		14A7EA421C5FAACF00A57159 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		14CDFCCD1C5AA1D90059AC9A /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		14CDFCCE1C5AA1D90059AC9A /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		14CDFCCF1C5AA1D90059AC9A /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
@@ -166,7 +168,8 @@
 			children = (
 				14CDFCCC1C5AA1D90059AC9A /* Spring */,
 				14948A1C1C458AC400368D5F /* AppDelegate.swift */,
-				14948A1E1C458AC400368D5F /* ViewController.swift */,
+				14A7EA421C5FAACF00A57159 /* Alarm.swift */,
+				143440B21C5BA6F9000392CC /* AlarmTableViewCell.swift */,
 				14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */,
 				14DE314C1C4D77A2000B5AA9 /* AddAlarmViewController.swift */,
 				14DE314E1C4D78D0000B5AA9 /* MenuViewController.swift */,
@@ -393,12 +396,13 @@
 				14A08C2F1C469830004CB01D /* AlarmTableViewController.swift in Sources */,
 				14CDFCF91C5AA1D90059AC9A /* LoadingView.swift in Sources */,
 				14CDFCFD1C5AA1D90059AC9A /* Spring.swift in Sources */,
+				143440B31C5BA6F9000392CC /* AlarmTableViewCell.swift in Sources */,
 				14CDFD021C5AA1D90059AC9A /* SpringTextField.swift in Sources */,
+				14A7EA431C5FAACF00A57159 /* Alarm.swift in Sources */,
 				14DE314D1C4D77A2000B5AA9 /* AddAlarmViewController.swift in Sources */,
 				14CDFCEE1C5AA1D90059AC9A /* BlurView.swift in Sources */,
 				14CDFCF61C5AA1D90059AC9A /* ImageLoader.swift in Sources */,
 				14CDFD031C5AA1D90059AC9A /* SpringTextView.swift in Sources */,
-				14948A1F1C458AC400368D5F /* ViewController.swift in Sources */,
 				14CDFCFB1C5AA1D90059AC9A /* Misc.swift in Sources */,
 				14948A1D1C458AC400368D5F /* AppDelegate.swift in Sources */,
 				14CDFCF51C5AA1D90059AC9A /* DesignableView.swift in Sources */,
