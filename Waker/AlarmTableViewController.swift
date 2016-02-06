@@ -18,7 +18,14 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        self.tableView.reloadData()
+        /*
+        let notification = UILocalNotification()
+        notification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        notification.alertBody = "Hey you! Yeah you! Swipe to unlock!"
+        notification.soundName = UILocalNotificationDefaultSoundName
+        notification.userInfo = ["CustomField1": "w00t"]
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+*/
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -35,6 +42,22 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         return cell
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            
+            if let alarmcell=tableView
+            {
+                alarmList.removeAtIndex(indexPath.row)
+                alarmcell.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            }
+        }
+    }
+    
     override func viewDidAppear(animated: Bool) {
         //Gets rid of extra cells lines
         tableView.tableFooterView = UIView(frame: CGRectZero)
@@ -49,6 +72,9 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         tableView.rowHeight = 90
         // Listens for if tableview needs to reload
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableData:", name: "reload", object: nil)
+        
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
         
        /*
         var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "viewDidLoad", userInfo: nil, repeats: true)

@@ -15,7 +15,6 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet weak var createAlarmView: DesignableView!
     @IBOutlet weak var createAlarmButton: DesignableButton!
     @IBOutlet weak var timePicker: UIDatePicker!
-    var table: AlarmTableViewController? = nil
     
     @IBAction func createAlarmButtonDidTouch(sender: AnyObject) {
         let date = timePicker.date

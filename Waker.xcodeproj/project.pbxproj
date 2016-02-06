@@ -309,6 +309,11 @@
 					14948A181C458AC400368D5F = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = GEKRKSA622;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					14948A2F1C458AC400368D5F = {
 						CreatedOnToolsVersion = 7.2;
