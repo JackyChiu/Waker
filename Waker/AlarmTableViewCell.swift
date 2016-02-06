@@ -21,12 +21,25 @@ class AlarmTableViewCell: UITableViewCell {
     weak var delegate: AlarmTableViewCellDelegate?
     
     func configureWithAlarmCell(alarm: Alarm){
-        let hour = alarm.hour
+        var hour = alarm.hour
         let minute = alarm.minute
-        let amISTrue = alarm.amIsTrue
+        let amIsTrue = alarm.amIsTrue
         let alarmIsOn = alarm.alarmIsOn
-        timeLabel.text = String(hour) + ":" + String(minute)
-        if(amISTrue){
+        
+        if(hour>12){
+            hour = hour - 12
+        }
+        else if(hour == 0){
+            hour = 12
+        }
+
+        if(minute<10){
+            timeLabel.text = String(hour) + ":0" + String(minute)
+        }
+        else{
+            timeLabel.text = String(hour) + ":" + String(minute)
+        }
+        if(amIsTrue){
             ampmLabel.text = "AM"
         }
         else{
