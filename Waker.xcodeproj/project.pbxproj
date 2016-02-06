@@ -17,6 +17,7 @@
 		14948A401C458AC400368D5F /* WakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948A3F1C458AC400368D5F /* WakerUITests.swift */; };
 		14A08C2F1C469830004CB01D /* AlarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */; };
 		14A7EA431C5FAACF00A57159 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A7EA421C5FAACF00A57159 /* Alarm.swift */; };
+		14AAF5E81C657B7700B8F26C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AAF5E71C657B7700B8F26C /* Data.swift */; };
 		14CDFCEB1C5AA1D90059AC9A /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDFCCD1C5AA1D90059AC9A /* AsyncButton.swift */; };
 		14CDFCEC1C5AA1D90059AC9A /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDFCCE1C5AA1D90059AC9A /* AsyncImageView.swift */; };
 		14CDFCED1C5AA1D90059AC9A /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDFCCF1C5AA1D90059AC9A /* AutoTextView.swift */; };
@@ -84,6 +85,7 @@
 		14948A411C458AC400368D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableViewController.swift; sourceTree = "<group>"; };
 		14A7EA421C5FAACF00A57159 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		14AAF5E71C657B7700B8F26C /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		14CDFCCD1C5AA1D90059AC9A /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		14CDFCCE1C5AA1D90059AC9A /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		14CDFCCF1C5AA1D90059AC9A /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				14CDFCCC1C5AA1D90059AC9A /* Spring */,
 				14948A1C1C458AC400368D5F /* AppDelegate.swift */,
+				14AAF5E71C657B7700B8F26C /* Data.swift */,
 				14A7EA421C5FAACF00A57159 /* Alarm.swift */,
 				143440B21C5BA6F9000392CC /* AlarmTableViewCell.swift */,
 				14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */,
@@ -394,6 +397,7 @@
 				14CDFD071C5AA1D90059AC9A /* UnwindSegue.swift in Sources */,
 				14CDFCEC1C5AA1D90059AC9A /* AsyncImageView.swift in Sources */,
 				14A08C2F1C469830004CB01D /* AlarmTableViewController.swift in Sources */,
+				14AAF5E81C657B7700B8F26C /* Data.swift in Sources */,
 				14CDFCF91C5AA1D90059AC9A /* LoadingView.swift in Sources */,
 				14CDFCFD1C5AA1D90059AC9A /* Spring.swift in Sources */,
 				143440B31C5BA6F9000392CC /* AlarmTableViewCell.swift in Sources */,

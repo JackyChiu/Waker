@@ -20,5 +20,25 @@ class AlarmTableViewCell: UITableViewCell {
     @IBOutlet weak var onSwitch: UISwitch!
     weak var delegate: AlarmTableViewCellDelegate?
     
-
+    func configureWithAlarmCell(alarm: Alarm){
+        let hour = alarm.hour
+        let minute = alarm.minute
+        let amISTrue = alarm.amIsTrue
+        let alarmIsOn = alarm.alarmIsOn
+        timeLabel.text = String(hour) + ":" + String(minute)
+        if(amISTrue){
+            ampmLabel.text = "AM"
+        }
+        else{
+            ampmLabel.text = "PM"
+        }
+        if(alarmIsOn){
+            onSwitch.on = true
+        }
+        else{
+            onSwitch.on = false
+        }
+        
+        
+    }
 }

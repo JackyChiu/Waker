@@ -16,6 +16,23 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet weak var createAlarmButton: DesignableButton!
     @IBOutlet weak var timePicker: UIDatePicker!
     
+    @IBAction func createAlarmButtonDidTouch(sender: AnyObject) {
+        let date = timePicker.date
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Hour, .Minute], fromDate: date)
+        var hour = components.hour
+        let minutes = components.minute
+        var amIsTrue = true
+        
+        if(hour>12){
+            hour = hour - 12
+            amIsTrue = false
+        }
+        alarmList.append(Alarm(hour: hour, minute: minutes, am: amIsTrue))
+        
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBAction func closeButtonDidTouch(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }

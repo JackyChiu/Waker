@@ -20,14 +20,16 @@ public enum Weekdays{
 
 public class Alarm: NSObject {
     public var hour: Int
-    public var mintue: Int
+    public var minute: Int
+    public var amIsTrue: Bool
     public var weekday: [Weekdays]!
     public var alarmIsOn: Bool
     
-    init(hour:Int, mintue:Int, alarmIsOn:Bool){
+    init(hour:Int, minute:Int, am:Bool){
         self.hour = hour
-        self.mintue = mintue
-        self.alarmIsOn = alarmIsOn
+        self.minute = minute
+        self.amIsTrue = am
+        self.alarmIsOn = true
     }
 
 }

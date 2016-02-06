@@ -378,6 +378,9 @@
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="createAlarmButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="lek-Bx-rXk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.61088781357835675" green="1" blue="0.51465394057601865" alpha="0.88561422413793101" colorSpace="calibratedRGB"/>
