@@ -3,10 +3,26 @@ An alarm made for iOS built with Swift and in Xcode. The main idea of the applic
 
 ![alt tag](https://raw.githubusercontent.com/JackyChiu/Waker/master/img/alarm.jpg)
 
+## Current Features
+- Create multiple alarms
+- Alarm goes off in foreground or background (There are limitations on this, planned to be improved).
+
 ## Planned Feature
+- Sound alarm even in silent mode
 - A small task to complete before alarm turns off
 - Display amount of time until you have to wake up
 - Notifies you when you should be going to sleep based on alarm
 - Records your sleep duration and graphs it with other in the week
 - Notifies you when your amount of sleep has been going down
 - Gradually increase the sound of the alarm at the set time
+- Responsive design for all iOS screens
+
+## Project Progress
+(Updated Feb 7)
+Created notifications that sysc up with in app sounds in order to create alarms.
+
+(Updated Feb 5)
+Created static data of alarms that can be created and deleted as table cells.
+
+(Updated Jan 14)
+Started project with some basis design.

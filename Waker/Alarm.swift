@@ -19,13 +19,15 @@ public enum Weekdays{
 }
 
 public class Alarm: NSObject {
+    public var date: NSDate
     public var hour: Int
     public var minute: Int
     public var amIsTrue: Bool
     public var weekday: [Weekdays]!
     public var alarmIsOn: Bool
     
-    init(hour:Int, minute:Int, am:Bool){
+    init(date:NSDate, hour:Int, minute:Int, am:Bool){
+        self.date = date
         self.hour = hour
         self.minute = minute
         self.amIsTrue = am
@@ -33,3 +35,8 @@ public class Alarm: NSObject {
     }
 
 }
+
+// List containing all of the alarms
+var alarmList: [Alarm] = [
+    
+]
