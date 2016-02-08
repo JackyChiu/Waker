@@ -66,6 +66,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.41781175136566162" green="0.80078345537185669" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="CaU-OZ-a3z" kind="relationship" relationship="viewControllers" id="tMU-XU-ZmJ"/>
@@ -89,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Graphs" image="Light Bar" id="u2V-zr-QGD"/>
+                    <tabBarItem key="tabBarItem" title="Graphs" image="WhiteSolidBar" id="u2V-zr-QGD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17U-y1-not" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,7 +125,7 @@
                                         </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9AX-jj-ikG">
                                             <rect key="frame" x="306" y="29" width="51" height="31"/>
-                                            <color key="onTintColor" red="0.43562141909134688" green="0.80521814569148886" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="onTintColor" red="0.41781175136566162" green="0.80078345537185669" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekdays" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPG-mu-AkF">
                                             <rect key="frame" x="15" y="60" width="340" height="21.5"/>
@@ -446,7 +451,7 @@
         <scene sceneID="cdF-51-WcF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CaU-OZ-a3z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Alarm" image="Light Alarm" id="X5k-6h-saf"/>
+                    <tabBarItem key="tabBarItem" title="Alarm" image="WhiteSolidAlarm" id="X5k-6h-saf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Mhg-vL-bxk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -472,9 +477,9 @@
     <resources>
         <image name="Fill Heart" width="32" height="30"/>
         <image name="Fill Plus" width="20" height="19"/>
-        <image name="Light Alarm" width="32" height="32"/>
-        <image name="Light Bar" width="26" height="32"/>
         <image name="Menu" width="22" height="16"/>
+        <image name="WhiteSolidAlarm" width="32" height="32"/>
+        <image name="WhiteSolidBar" width="26" height="32"/>
         <image name="noButton" width="32" height="32"/>
         <image name="yesButton" width="32" height="32"/>
     </resources>
