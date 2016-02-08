@@ -1,5 +1,5 @@
 # Waker (*Currently in progress*)
-An alarm made for iOS built with Swift and in Xcode. The main idea of the application is to have a small task to complete to be able to turn off the alarm. This will encourage for some brain activity when you wake up. Currently, the alarm screen is almost fully designed. I'm looking into how the alarm will fire as there are complexities with Apple allowing applications to set alarms will in the background or not active. The design for the alarm is mostly being focused on the iPhone 6 screen.
+An alarm made for iOS built with Swift and in Xcode. The main idea of the application is to have a small task to complete to be able to turn off the alarm. This will encourage for some brain activity when you wake up, making the process of waking up easier. Currently, I'm looking into how the alarm will fire as there are complexities with Apple allowing applications to set alarms will in the background or not active. The design for the alarm is mostly being focused on the iPhone 6 screen.
 
 ![alt tag](https://raw.githubusercontent.com/JackyChiu/Waker/master/img/alarm.jpg)
 
@@ -16,6 +16,19 @@ An alarm made for iOS built with Swift and in Xcode. The main idea of the applic
 - Notifies you when your amount of sleep has been going down
 - Gradually increase the sound of the alarm at the set time
 - Responsive design for all iOS screens
+
+## Installation
+Mac:
+- Clone the repo 
+- Open project file in Xcode 7.0 or higher
+- Select simulator to run on
+- Run
+
+iOS:
+- Do above steps for Mac
+- Connect device to Mac
+- Choose your device to run on in top left coner
+- Run
 
 ## Project Progress
 (Updated Feb 7)
