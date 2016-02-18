@@ -225,7 +225,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="ifk-eg-o8w" firstAttribute="centerX" secondItem="IRf-NR-59g" secondAttribute="centerX" id="Wb3-gy-X1O"/>
                                                 <constraint firstItem="1Hv-oT-ETx" firstAttribute="leading" secondItem="04E-pg-ch3" secondAttribute="trailing" constant="30" id="Xfk-1N-cAt"/>
@@ -322,7 +322,7 @@
                                                     </date>
                                                 </datePicker>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="15"/>

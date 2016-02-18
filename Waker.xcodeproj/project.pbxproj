@@ -179,8 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				14CDFCCC1C5AA1D90059AC9A /* Spring */,
-				14948A1C1C458AC400368D5F /* AppDelegate.swift */,
 				14172C681C6818220045461B /* Audio.swift */,
+				14948A1C1C458AC400368D5F /* AppDelegate.swift */,
 				14A7EA421C5FAACF00A57159 /* Alarm.swift */,
 				143440B21C5BA6F9000392CC /* AlarmTableViewCell.swift */,
 				14A08C2E1C469830004CB01D /* AlarmTableViewController.swift */,

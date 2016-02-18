@@ -32,6 +32,16 @@ public class Alarm: NSObject {
         self.minute = minute
         self.amIsTrue = am
         self.alarmIsOn = true
+        super.init()
+        createNotification()
+    }
+    
+    func createNotification(){
+        let notification = UILocalNotification()
+        notification.fireDate = date
+        notification.alertBody = "Alarm went off!"
+        notification.soundName = "bell.mp3"
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
 
 }

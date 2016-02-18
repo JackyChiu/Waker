@@ -16,14 +16,6 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet weak var createAlarmButton: DesignableButton!
     @IBOutlet weak var timePicker: UIDatePicker!
     
-    func createNotification(index: Int){
-        let notification = UILocalNotification()
-        notification.fireDate = alarmList[index].date
-        notification.alertBody = "Alarm went off!"
-        notification.soundName = "bell.mp3"
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-    }
-    
     @IBAction func createAlarmButtonDidTouch(sender: AnyObject) {
         let date = timePicker.date
         let calendar = NSCalendar.currentCalendar()
@@ -37,7 +29,6 @@ class AddAlarmViewController: UIViewController {
         }
         
         alarmList.append(Alarm(date: date, hour: hour, minute: minutes, am: amIsTrue))
-        createNotification(alarmList.count-1)
         // Sends notifcation for tableview to reload
         NSNotificationCenter.defaultCenter().postNotificationName("reload", object: nil)
         dismissViewControllerAnimated(true, completion: nil)

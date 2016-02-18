@@ -65,10 +65,40 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         tableView.rowHeight = 90
         // Listens for if tableview needs to reload
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableData:", name: "reload", object: nil)
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playAlarm:", name: "playAlarm", object: nil)
         // Asks for premission to send notifications
         let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+    }
+    
+    func playAlarm(notification: NSNotification){
+        
+        playAudio()
+        
+        let alert = UIAlertController(title: "Alarm!", message: "Wake up sleepy head!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Snooze", style: .Default, handler: { (action: UIAlertAction!) in
+            print("Snooze")
+            audioPlayer.stop()
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Stop", style: .Default, handler: { (action: UIAlertAction!) in
+            print("Stop")
+            audioPlayer.stop()
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+        turnAlarmOff()
+        tableView.reloadData()
+    }
+    
+    func turnAlarmOff(){
+        let currentDate = NSDate()
+        for alarm in alarmList{
+            if (alarm.date.timeIntervalSinceDate(currentDate)<1){
+                alarm.alarmIsOn = false
+            }
+        }
     }
     
     // Tells tableview to reload
