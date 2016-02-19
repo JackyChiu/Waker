@@ -31,6 +31,9 @@ iOS:
 - Run
 
 ## Project Progress
+(Update Feb 18)
+Created alerts so that the alarm can be turned off before sound file stops. (Temporary)
+
 (Updated Feb 7)
 Created notifications that sysc up with in app sounds in order to create alarms.
 
