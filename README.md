@@ -31,6 +31,9 @@ iOS:
 - Run
 
 ## Project Progress
+(Uodate Feb 20)
+Added snooze functionality to alarm.
+
 (Update Feb 18)
 Created alerts so that the alarm can be turned off before sound file stops. (Temporary)
 

@@ -75,11 +75,21 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         
         playAudio()
         
+        var currentAlarm: Alarm = alarmList[0]
+        let currentDate = NSDate()
+        
+        for alarm in alarmList{
+            if (alarm.date.timeIntervalSinceDate(currentDate)<1){
+                alarm.turnAlarmOff()
+                currentAlarm = alarm
+            }
+        }
+        
         let alert = UIAlertController(title: "Alarm!", message: "Wake up sleepy head!", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Snooze", style: .Default, handler: { (action: UIAlertAction!) in
             print("Snooze")
             audioPlayer.stop()
-            
+            currentAlarm.createNotificationFromDate(NSDate(timeIntervalSinceNow: minuteInSeconds))
         }))
         
         alert.addAction(UIAlertAction(title: "Stop", style: .Default, handler: { (action: UIAlertAction!) in
@@ -88,19 +98,8 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         }))
         self.presentViewController(alert, animated: true, completion: nil)
         
-        turnAlarmOff()
         tableView.reloadData()
     }
-    
-    func turnAlarmOff(){
-        let currentDate = NSDate()
-        for alarm in alarmList{
-            if (alarm.date.timeIntervalSinceDate(currentDate)<1){
-                alarm.alarmIsOn = false
-            }
-        }
-    }
-    
     // Tells tableview to reload
     func reloadTableData(notification: NSNotification) {
         tableView.reloadData()

@@ -8,6 +8,8 @@
 
 import UIKit
 
+let minuteInSeconds:Double = 60.0
+
 public enum Weekdays{
     case Sunday
     case Monday
@@ -25,6 +27,7 @@ public class Alarm: NSObject {
     public var amIsTrue: Bool
     public var weekday: [Weekdays]!
     public var alarmIsOn: Bool
+    public var alarmSound: String
     
     init(date:NSDate, hour:Int, minute:Int, am:Bool){
         self.date = date
@@ -32,6 +35,7 @@ public class Alarm: NSObject {
         self.minute = minute
         self.amIsTrue = am
         self.alarmIsOn = true
+        self.alarmSound = "bell.mp3"
         super.init()
         createNotification()
     }
@@ -40,8 +44,20 @@ public class Alarm: NSObject {
         let notification = UILocalNotification()
         notification.fireDate = date
         notification.alertBody = "Alarm went off!"
-        notification.soundName = "bell.mp3"
+        notification.soundName = alarmSound
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+    
+    func createNotificationFromDate(mintueAfterSnooze:NSDate){
+        let notification = UILocalNotification()
+        notification.fireDate = mintueAfterSnooze
+        notification.alertBody = "Alarm went off!"
+        notification.soundName = alarmSound
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+    
+    func turnAlarmOff(){
+        alarmIsOn = false
     }
 
 }
