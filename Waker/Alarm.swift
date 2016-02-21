@@ -56,13 +56,29 @@ public class Alarm: NSObject {
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
+    func createAlert(view:UITableViewController, currentAlarm:Alarm){
+        let alert = UIAlertController(title: "Alarm!", message: "Wake up sleepy head!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Snooze", style: .Default, handler: { (action: UIAlertAction!) in
+            print("Snooze")
+            audioPlayer.stop()
+            currentAlarm.createNotificationFromDate(NSDate(timeIntervalSinceNow: minuteInSeconds))
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Stop", style: .Default, handler: { (action: UIAlertAction!) in
+            print("Stop")
+            audioPlayer.stop()
+        }))
+        view.presentViewController(alert, animated: true, completion: nil)
+
+    }
+    
     func turnAlarmOff(){
         alarmIsOn = false
     }
 
 }
 
-// List containing all of the alarms
+// List containing all of the alarms //
 var alarmList: [Alarm] = [
     
 ]

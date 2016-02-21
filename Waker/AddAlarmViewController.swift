@@ -14,23 +14,12 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet weak var cancelButton: DesignableButton!
     @IBOutlet weak var createAlarmView: DesignableView!
     @IBOutlet weak var createAlarmButton: DesignableButton!
-    @IBOutlet weak var timePicker: UIDatePicker!
     
     @IBAction func createAlarmButtonDidTouch(sender: AnyObject) {
-        let date = timePicker.date
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Hour, .Minute], fromDate: date)
-        let hour = components.hour
-        let minutes = components.minute
-        var amIsTrue = true
-        
-        if(hour>12){
-            amIsTrue = false
-        }
-        
-        alarmList.append(Alarm(date: date, hour: hour, minute: minutes, am: amIsTrue))
-        // Sends notifcation for tableview to reload
-        NSNotificationCenter.defaultCenter().postNotificationName("reload", object: nil)
+        // Adds alarm in alarm option view //
+        NSNotificationCenter.defaultCenter().postNotificationName("addAlarm", object: nil)
+        // Calls to reload tableview data //
+        NSNotificationCenter.defaultCenter().postNotificationName("reloadTableData", object: nil)
         dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func closeButtonDidTouch(sender: AnyObject) {
@@ -39,6 +28,10 @@ class AddAlarmViewController: UIViewController {
     
     @IBAction func cancelButtonDidTouch(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        self.view.layer.cornerRadius = 8;
     }
     
     override func viewWillAppear(animated: Bool) {
