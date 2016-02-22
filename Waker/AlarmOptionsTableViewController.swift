@@ -13,7 +13,6 @@ class AlarmOptionsTableViewController: UITableViewController {
     // MARK: IBOutlets and varibles
     @IBOutlet weak var repeatSwitch: UISwitch!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
     @IBOutlet weak var weekdayPicker: MultiSelectSegmentedControl!
     var weekdayList = [Weekdays.Sunday,
                         Weekdays.Monday,
@@ -26,22 +25,13 @@ class AlarmOptionsTableViewController: UITableViewController {
     func addAlarm(notification:NSNotification){
         
         let date = datePicker.date
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Hour, .Minute], fromDate: date)
-        let hour = components.hour
-        let minutes = components.minute
-        var amIsTrue = true
         var repeatOnTheseWeekdays:[Weekdays] = []
-        
-        if(hour>12){
-            amIsTrue = false
-        }
         
         for weekday in PermutationGenerator(elements: weekdayList, indices: weekdayPicker.selectedSegmentIndexes){
             repeatOnTheseWeekdays.append(weekday)
         }
         
-        alarmList.append(Alarm(date: date, hour: hour, minute: minutes, am: amIsTrue))
+        alarmList.append(Alarm(date: date, repeatOnTheseWeekdays: repeatOnTheseWeekdays))
     }
     
     override func viewDidLoad() {
