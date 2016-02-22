@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14172C691C6818220045461B /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14172C681C6818220045461B /* Audio.swift */; };
 		14172C6E1C6822DF0045461B /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14172C6D1C6822DF0045461B /* bell.mp3 */; };
+		142045E71C7B6FA7002E8A4A /* MultiSelectSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 142045E61C7B6FA7002E8A4A /* MultiSelectSegmentedControl.m */; };
 		143440B31C5BA6F9000392CC /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143440B21C5BA6F9000392CC /* AlarmTableViewCell.swift */; };
 		143DC1241C797103002BABAF /* AlarmOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143DC1231C797103002BABAF /* AlarmOptionsTableViewController.swift */; };
 		14948A1D1C458AC400368D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948A1C1C458AC400368D5F /* AppDelegate.swift */; };
@@ -73,6 +74,9 @@
 /* Begin PBXFileReference section */
 		14172C681C6818220045461B /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		14172C6D1C6822DF0045461B /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
+		142045E51C7B6FA7002E8A4A /* MultiSelectSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectSegmentedControl.h; sourceTree = "<group>"; };
+		142045E61C7B6FA7002E8A4A /* MultiSelectSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectSegmentedControl.m; sourceTree = "<group>"; };
+		142045E81C7B7013002E8A4A /* Waker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Waker-Bridging-Header.h"; sourceTree = "<group>"; };
 		143440B21C5BA6F9000392CC /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 		143DC1231C797103002BABAF /* AlarmOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmOptionsTableViewController.swift; sourceTree = "<group>"; };
 		14948A191C458AC400368D5F /* Waker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +161,16 @@
 			path = SoundFiles;
 			sourceTree = "<group>";
 		};
+		142045E41C7B6FA7002E8A4A /* MultiSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				142045E51C7B6FA7002E8A4A /* MultiSelectSegmentedControl.h */,
+				142045E61C7B6FA7002E8A4A /* MultiSelectSegmentedControl.m */,
+				142045E81C7B7013002E8A4A /* Waker-Bridging-Header.h */,
+			);
+			path = MultiSegmentControl;
+			sourceTree = "<group>";
+		};
 		14948A101C458AC400368D5F = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +194,7 @@
 		14948A1B1C458AC400368D5F /* Waker */ = {
 			isa = PBXGroup;
 			children = (
+				142045E41C7B6FA7002E8A4A /* MultiSegmentControl */,
 				14CDFCCC1C5AA1D90059AC9A /* Spring */,
 				14172C681C6818220045461B /* Audio.swift */,
 				14948A1C1C458AC400368D5F /* AppDelegate.swift */,
@@ -416,6 +431,7 @@
 				14CDFCEF1C5AA1D90059AC9A /* DesignableButton.swift in Sources */,
 				14CDFCFF1C5AA1D90059AC9A /* SpringButton.swift in Sources */,
 				14CDFD011C5AA1D90059AC9A /* SpringLabel.swift in Sources */,
+				142045E71C7B6FA7002E8A4A /* MultiSelectSegmentedControl.m in Sources */,
 				14CDFD071C5AA1D90059AC9A /* UnwindSegue.swift in Sources */,
 				14CDFCEC1C5AA1D90059AC9A /* AsyncImageView.swift in Sources */,
 				14A08C2F1C469830004CB01D /* AlarmTableViewController.swift in Sources */,
@@ -575,6 +591,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jacky-Chiu.Waker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jackychiu/Dev/Waker/Waker/MultiSegmentControl/Waker-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -586,6 +603,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jacky-Chiu.Waker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jackychiu/Dev/Waker/Waker/MultiSegmentControl/Waker-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -25,7 +25,7 @@ public class Alarm: NSObject {
     public var hour: Int
     public var minute: Int
     public var amIsTrue: Bool
-    public var weekday: [Weekdays]!
+    public var repeatOnTheseWeekdays: [Weekdays]!
     public var alarmIsOn: Bool
     public var alarmSound: String
     

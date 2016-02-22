@@ -13,14 +13,16 @@ class AlarmOptionsTableViewController: UITableViewController {
     // MARK: IBOutlets and varibles
     @IBOutlet weak var repeatSwitch: UISwitch!
     @IBOutlet weak var datePicker: UIDatePicker!
-
-    @IBOutlet weak var sunButton: UIButton!
     
-    @IBAction func sunButtonDidTouch(sender: AnyObject) {
-        sunButton.tintColor = UIColor.blueColor()
-        sunButton.backgroundColor = UIColor.lightGrayColor()
-    }
-
+    @IBOutlet weak var weekdayPicker: MultiSelectSegmentedControl!
+    var weekdayList = [Weekdays.Sunday,
+                        Weekdays.Monday,
+                        Weekdays.Tuesday,
+                        Weekdays.Wednesday,
+                        Weekdays.Thursday,
+                        Weekdays.Friday,
+                        Weekdays.Saturaday]
+    
     func addAlarm(notification:NSNotification){
         
         let date = datePicker.date
@@ -29,9 +31,14 @@ class AlarmOptionsTableViewController: UITableViewController {
         let hour = components.hour
         let minutes = components.minute
         var amIsTrue = true
+        var repeatOnTheseWeekdays:[Weekdays] = []
         
         if(hour>12){
             amIsTrue = false
+        }
+        
+        for weekday in PermutationGenerator(elements: weekdayList, indices: weekdayPicker.selectedSegmentIndexes){
+            repeatOnTheseWeekdays.append(weekday)
         }
         
         alarmList.append(Alarm(date: date, hour: hour, minute: minutes, am: amIsTrue))
@@ -43,7 +50,6 @@ class AlarmOptionsTableViewController: UITableViewController {
         
         // Listens for when user makes alarm //
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "addAlarm:", name: "addAlarm", object: nil)
-        
     }
     
     // MARK: Misc
