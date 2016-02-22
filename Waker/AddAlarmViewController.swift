@@ -22,6 +22,8 @@ class AddAlarmViewController: UIViewController {
         NSNotificationCenter.defaultCenter().postNotificationName("reloadTableData", object: nil)
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    // MARK: Misc
     @IBAction func closeButtonDidTouch(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }

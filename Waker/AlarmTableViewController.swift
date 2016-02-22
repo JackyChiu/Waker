@@ -11,15 +11,6 @@ import AVFoundation
 
 class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegate {
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int)->Int{
-        // Returns the number of alarms //
-        return alarmList.count
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("AlarmCell") as! AlarmTableViewCell
@@ -32,28 +23,6 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         cell.delegate = self
         
         return cell
-    }
-    
-    // Allows for deleting an alarm cell //
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    
-    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            // Handles delete (by removing the data from your array and updating the tableview) //
-            
-            if let alarmcell=tableView
-            {
-                alarmList.removeAtIndex(indexPath.row)
-                alarmcell.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            }
-        }
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        //Gets rid of extra cells lines //
-        tableView.tableFooterView = UIView(frame: CGRectZero)
     }
     
     override func viewDidLoad() {
@@ -90,9 +59,43 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         
         tableView.reloadData()
     }
+    
+    //MARK: Misc
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int)->Int{
+        // Returns the number of alarms //
+        return alarmList.count
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        //Gets rid of extra cells lines //
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+    }
+    
     // Tells tableview to reload //
     func reloadTableData(notification: NSNotification) {
         tableView.reloadData()
+    }
+    
+    // Allows for deleting an alarm cell //
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // Handles delete (by removing the data from your array and updating the tableview) //
+            
+            if let alarmcell=tableView
+            {
+                alarmList.removeAtIndex(indexPath.row)
+                alarmcell.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            }
+        }
     }
 
     // Segues to other screens //
