@@ -30,6 +30,14 @@ iOS:
 - Choose your device to run on in top left coner
 - Run
 
+## Thanks to these third party resources
+
+MengTo: https://github.com/MengTo/Spring
+(For the beautiful animations library)
+
+yonat: https://github.com/yonat/MultiSelectSegmentedControl
+(To allow multiple selections in the weekday choice) 
+
 ## Project Progress
 (Uodate Feb 20)
 Added snooze functionality to alarm.
