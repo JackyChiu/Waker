@@ -28,6 +28,7 @@ public class Alarm: NSObject {
     public var repeatOnTheseWeekdays: [Weekdays]!
     public var alarmIsOn: Bool
     public var alarmSound: String
+    let notification = UILocalNotification()
     var alarmWasTurnedOff = false
     var alertOnScreen = false
 
@@ -55,7 +56,6 @@ public class Alarm: NSObject {
     }
     
     func createNotification(){
-        let notification = UILocalNotification()
         // Alarm doesn't repeat //
         if repeatOnTheseWeekdays.count == 0{
             notification.fireDate = date
@@ -67,7 +67,6 @@ public class Alarm: NSObject {
     }
     
     func createNotificationFromDate(newDate:NSDate){
-        let notification = UILocalNotification()
         notification.fireDate = newDate
         notification.alertBody = "You missed " + createAlarmMessage()
         notification.soundName = alarmSound
@@ -121,6 +120,10 @@ public class Alarm: NSObject {
             alarmMessage = "Alarm for " + String(hour) + ":" + String(minute)
         }
         return alarmMessage
+    }
+    
+    func turnAlarmOn(){
+        alarmIsOn = true
     }
     
     func turnAlarmOff(){

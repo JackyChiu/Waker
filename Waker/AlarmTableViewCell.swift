@@ -19,11 +19,12 @@ class AlarmTableViewCell: UITableViewCell {
     @IBOutlet weak var onSwitch: UISwitch!
     weak var delegate: AlarmTableViewCellDelegate?
     
-    func configureWithAlarmCell(alarm: Alarm){
+    func configureWithAlarmCell(alarm: Alarm, row: Int){
         var hour = alarm.hour
         let minute = alarm.minute
         let amIsTrue = alarm.amIsTrue
         let alarmIsOn = alarm.alarmIsOn
+        let repeatOnTheseWeekdays = alarm.repeatOnTheseWeekdays
         
         if(hour>12){
             hour = hour - 12
@@ -51,6 +52,27 @@ class AlarmTableViewCell: UITableViewCell {
             onSwitch.on = false
         }
         
+        if repeatOnTheseWeekdays.count != 0{
+            weekdaysLabel.text! = ""
+            for weekdays in repeatOnTheseWeekdays{
+                weekdaysLabel.text! += String(weekdays) + " "
+            }
+        }
         
+        //onSwitch.tag = row
     }
+    
+    @IBAction func onSwitchToggle(sender: AnyObject) {
+        // TODO: Problem with deleting cell, causing mess in indexing
+        /*
+        print(sender.tag)
+        if onSwitch.on{
+            alarmList[sender.tag].turnAlarmOn()
+        }
+        else{
+            alarmList[sender.tag].turnAlarmOff()
+        }
+        */
+    }
+    
 }

@@ -19,7 +19,7 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         
         let alarm = alarmList[indexPath.row]
         // Get alarmcell formatting and data //
-        cell.configureWithAlarmCell(alarm)
+        cell.configureWithAlarmCell(alarm, row: indexPath.row)
         cell.delegate = self
         
         return cell
@@ -55,7 +55,7 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
             }
         }
         
-        currentAlarm.createAlert(self,currentAlarm: currentAlarm)
+        currentAlarm.createAlert(self, currentAlarm: currentAlarm)
         
         tableView.reloadData()
     }
