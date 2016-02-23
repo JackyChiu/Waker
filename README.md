@@ -6,6 +6,8 @@ An alarm made for iOS built with Swift and in Xcode. The main idea of the applic
 ## Current Features
 - Create multiple alarms
 - Alarm goes off in foreground or background (There are limitations on this, planned to be improved).
+- Snooze functionality
+- Alarm goes off even when in "Do not Disturb mode"
 
 ## Planned Feature
 - Sound alarm even in silent mode
