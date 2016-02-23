@@ -29,6 +29,7 @@ public class Alarm: NSObject {
     public var alarmIsOn: Bool
     public var alarmSound: String
     var alarmWasTurnedOff = false
+    var alertOnScreen = false
 
     init(date:NSDate, repeatOnTheseWeekdays:[Weekdays]){
         
@@ -74,24 +75,27 @@ public class Alarm: NSObject {
     }
     
     func createAlert(view:UITableViewController, currentAlarm:Alarm){
-        // TODO: PROBLEM WITH TRING TO CREATING NEW ALERT ON TOP OF OLD ONE
-        // Alert Message //
-        let alertMessage:String = createAlarmMessage()
-        
-        let alert:UIAlertController! = UIAlertController(title: "Alarm!", message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        // Alert actions
-        alert.addAction(UIAlertAction(title: "Snooze", style: .Default, handler: { (action: UIAlertAction!) in
-            print("Snooze")
-            audioPlayer.stop()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Stop", style: .Default, handler: { (action: UIAlertAction!) in
-            print("Stop")
-            audioPlayer.stop()
-            self.alarmWasTurnedOff = true
-        }))
-        view.presentViewController(alert, animated: true, completion: nil)
+        if !alertOnScreen{
+            // Alert Message //
+            let alertMessage:String = createAlarmMessage()
+            
+            let alert:UIAlertController! = UIAlertController(title: "Alarm!", message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertOnScreen = true
+            // Alert actions
+            alert.addAction(UIAlertAction(title: "Snooze", style: .Default, handler: { (action: UIAlertAction!) in
+                print("Snooze")
+                audioPlayer.stop()
+                self.alertOnScreen = false
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Stop", style: .Default, handler: { (action: UIAlertAction!) in
+                print("Stop")
+                audioPlayer.stop()
+                self.alarmWasTurnedOff = true
+                self.alertOnScreen = false
+            }))
+            view.presentViewController(alert, animated: true, completion: nil)
+            }
         NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "snoozeAlarm", userInfo: nil, repeats: false)
     }
     func snoozeAlarm(){
