@@ -50,11 +50,12 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         
         for alarm in alarmList{
             if (alarm.date.timeIntervalSinceDate(currentDate)<1){
-                alarm.turnAlarmOff()
+                if !currentAlarm.alarmRepeats{
+                    alarm.turnAlarmOff()
+                }
                 currentAlarm = alarm
             }
         }
-        
         currentAlarm.createAlert(self, currentAlarm: currentAlarm)
         
         tableView.reloadData()

@@ -5,8 +5,9 @@ An alarm made for iOS built with Swift and in Xcode. The main idea of the applic
 
 ## Current Features
 - Create multiple alarms
-- Alarm goes off in foreground or background (There are limitations on this, planned to be improved).
+- Weekday repeat options
 - Snooze functionality
+- Alarm goes off in foreground or background (There are limitations on this, planned to be improved)
 - Alarm goes off even when in "Do not Disturb mode"
 
 ## Planned Feature
@@ -41,6 +42,9 @@ yonat: https://github.com/yonat/MultiSelectSegmentedControl
 (To allow multiple selections in the weekday choice) 
 
 ## Project Progress
+(Update Feb 24)
+Alarm can now repeat on day where you tell it to.
+
 (Uodate Feb 20)
 Added snooze functionality to alarm.
 

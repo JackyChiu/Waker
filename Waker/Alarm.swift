@@ -8,7 +8,7 @@
 
 import UIKit
 
-let minuteInSeconds:Double = 60.0
+let dayInSeconds:Double = Double(60*60*24)
 
 public enum Weekdays{
     case Sun
@@ -18,6 +18,24 @@ public enum Weekdays{
     case Thu
     case Fri
     case Sat
+    func value()->Int{
+        switch self{
+            case .Sun:
+                return 0
+            case .Mon:
+                    return 1
+            case .Tue:
+                return 2
+            case .Wed:
+                return 3
+            case .Thu:
+                return 4
+            case .Fri:
+                return 5
+            case .Sat:
+            return 6
+        }
+    }
 }
 
 public class Alarm: NSObject {
@@ -28,6 +46,7 @@ public class Alarm: NSObject {
     public var repeatOnTheseWeekdays: [Weekdays]!
     public var alarmIsOn: Bool
     public var alarmSound: String
+    public var alarmRepeats: Bool
     let notification = UILocalNotification()
     var alarmWasTurnedOff = false
     var alertOnScreen = false
@@ -51,19 +70,23 @@ public class Alarm: NSObject {
         self.alarmIsOn = true
         self.alarmSound = "bell.mp3"
         self.repeatOnTheseWeekdays = repeatOnTheseWeekdays
+        if repeatOnTheseWeekdays.count != 0{
+            self.alarmRepeats = true
+        }
+        else{
+            self.alarmRepeats = false
+        }
         super.init()
         createNotification()
     }
     
     func createNotification(){
-        // Alarm doesn't repeat //
-        // TODO: Impliment repeat day use
-        //if repeatOnTheseWeekdays.count == 0{
-            notification.fireDate = date
-            print(date)
-            notification.soundName = alarmSound
-            notification.alertBody = createAlarmMessage()
-        //}
+        if alarmRepeats{
+            date = date.dateByAddingTimeInterval(smallestDifference() * dayInSeconds)
+        }
+        notification.fireDate = date
+        notification.soundName = alarmSound
+        notification.alertBody = createAlarmMessage()
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
@@ -83,25 +106,38 @@ public class Alarm: NSObject {
             alertOnScreen = true
             // Alert actions
             alert.addAction(UIAlertAction(title: "Snooze", style: .Default, handler: { (action: UIAlertAction!) in
-                print("Snooze")
                 audioPlayer.stop()
                 self.alertOnScreen = false
             }))
             
             alert.addAction(UIAlertAction(title: "Stop", style: .Default, handler: { (action: UIAlertAction!) in
-                print("Stop")
                 audioPlayer.stop()
                 self.alarmWasTurnedOff = true
                 self.alertOnScreen = false
             }))
             view.presentViewController(alert, animated: true, completion: nil)
             }
-        NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "snoozeAlarm", userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "snoozeAlarm", userInfo: nil, repeats: false)
     }
+    
     func snoozeAlarm(){
         if !alarmWasTurnedOff{
             createNotificationFromDate(NSDate())
         }
+        else if alarmRepeats{
+            date = date.dateByAddingTimeInterval(dayInSeconds)
+            createNotification()
+        }
+    }
+    
+    func turnAlarmOn(){
+        alarmIsOn = true
+        createNotification()
+    }
+    
+    func turnAlarmOff(){
+        alarmIsOn = false
+        UIApplication.sharedApplication().cancelLocalNotification(notification)
     }
     
     func createAlarmMessage()->String{
@@ -123,17 +159,28 @@ public class Alarm: NSObject {
         return alarmMessage
     }
     
-    func cancel(){
+    func getWeekday(date: NSDate)->Int{
+        let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let myComponents = myCalendar.components(.Weekday, fromDate: date)
+        let weekday = myComponents.weekday
+        // App weekday count starts at 0 //
+        return weekday - 1
     }
     
-    func turnAlarmOn(){
-        alarmIsOn = true
-        createNotification()
-    }
-    
-    func turnAlarmOff(){
-        alarmIsOn = false
-        UIApplication.sharedApplication().cancelLocalNotification(notification)
+    func smallestDifference()->Double{
+        var difference:Int
+        var smallestDifference = 6 // 6 is max difference of days to be apart //
+        let currentWeekday = getWeekday(date)
+        for weekday in repeatOnTheseWeekdays{
+            difference =  weekday.value() - currentWeekday
+            if difference < 0{
+                difference += 7
+            }
+            if difference < smallestDifference{
+                smallestDifference = difference
+            }
+        }
+        return Double(smallestDifference)
     }
 
 }
