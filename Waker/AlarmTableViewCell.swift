@@ -59,20 +59,19 @@ class AlarmTableViewCell: UITableViewCell {
             }
         }
         
-        //onSwitch.tag = row
+        onSwitch.tag = row
     }
     
     @IBAction func onSwitchToggle(sender: AnyObject) {
         // TODO: Problem with deleting cell, causing mess in indexing
-        /*
-        print(sender.tag)
+        
         if onSwitch.on{
             alarmList[sender.tag].turnAlarmOn()
         }
         else{
             alarmList[sender.tag].turnAlarmOff()
         }
-        */
+        
     }
     
 }

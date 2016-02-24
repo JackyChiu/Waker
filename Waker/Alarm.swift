@@ -11,13 +11,13 @@ import UIKit
 let minuteInSeconds:Double = 60.0
 
 public enum Weekdays{
-    case Sunday
-    case Monday
-    case Tuesday
-    case Wednesday
-    case Thursday
-    case Friday
-    case Saturaday
+    case Sun
+    case Mon
+    case Tue
+    case Wed
+    case Thu
+    case Fri
+    case Sat
 }
 
 public class Alarm: NSObject {
@@ -57,12 +57,13 @@ public class Alarm: NSObject {
     
     func createNotification(){
         // Alarm doesn't repeat //
-        if repeatOnTheseWeekdays.count == 0{
+        // TODO: Impliment repeat day use
+        //if repeatOnTheseWeekdays.count == 0{
             notification.fireDate = date
             print(date)
             notification.soundName = alarmSound
             notification.alertBody = createAlarmMessage()
-        }
+        //}
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
@@ -122,12 +123,17 @@ public class Alarm: NSObject {
         return alarmMessage
     }
     
+    func cancel(){
+    }
+    
     func turnAlarmOn(){
         alarmIsOn = true
+        createNotification()
     }
     
     func turnAlarmOff(){
         alarmIsOn = false
+        UIApplication.sharedApplication().cancelLocalNotification(notification)
     }
 
 }

@@ -92,6 +92,7 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
             
             if let alarmcell=tableView
             {
+                alarmList[indexPath.row].turnAlarmOff()
                 alarmList.removeAtIndex(indexPath.row)
                 alarmcell.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }

@@ -14,13 +14,13 @@ class AlarmOptionsTableViewController: UITableViewController {
     @IBOutlet weak var repeatSwitch: UISwitch!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var weekdayPicker: MultiSelectSegmentedControl!
-    var weekdayList = [Weekdays.Sunday,
-                        Weekdays.Monday,
-                        Weekdays.Tuesday,
-                        Weekdays.Wednesday,
-                        Weekdays.Thursday,
-                        Weekdays.Friday,
-                        Weekdays.Saturaday]
+    var weekdayList = [Weekdays.Sun,
+                        Weekdays.Mon,
+                        Weekdays.Tue,
+                        Weekdays.Wed,
+                        Weekdays.Thu,
+                        Weekdays.Fri,
+                        Weekdays.Sat]
     
     func addAlarm(notification:NSNotification){
         
