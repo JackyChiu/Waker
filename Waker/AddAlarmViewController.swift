@@ -14,12 +14,13 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet weak var cancelButton: DesignableButton!
     @IBOutlet weak var createButton: DesignableButton!
     
-    @IBAction func createAlarmButtonDidTouch(sender: AnyObject) {
+    @IBAction func createButtonDidTouch(sender: AnyObject) {
         // Adds alarm in alarm option view //
         //NSNotificationCenter.defaultCenter().postNotificationName("addAlarm", object: nil)
         // Calls to reload tableview data //
         //NSNotificationCenter.defaultCenter().postNotificationName("reloadTableData", object: nil)
-        dismissViewControllerAnimated(true, completion: nil)
+        // dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
     @IBAction func closeButtonDidTouch(sender: AnyObject) {

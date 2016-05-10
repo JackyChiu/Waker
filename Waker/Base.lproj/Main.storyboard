@@ -316,12 +316,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dX-8S-u23">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                            <connections>
-                                                <action selector="closeButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="hXb-Pt-JrR"/>
-                                            </connections>
-                                        </button>
                                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-CE-hVr">
                                             <rect key="frame" x="25" y="96" width="325" height="400"/>
                                             <constraints>
@@ -333,11 +327,10 @@
                                             </connections>
                                         </containerView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft0-e1-9sP" customClass="DesignableButton">
-                                            <rect key="frame" x="25" y="504" width="162.5" height="40"/>
+                                            <rect key="frame" x="25" y="504" width="161" height="40"/>
                                             <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="162.5" id="mfE-cU-E2k"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="161" id="vtO-gd-wCj"/>
+                                                <constraint firstAttribute="width" constant="161" id="Bnd-QV-8jd"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -372,7 +365,13 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="createAlarmButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="lek-Bx-rXk"/>
+                                                <action selector="createButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="5br-Lu-TlU"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dX-8S-u23">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <connections>
+                                                <action selector="closeButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="hXb-Pt-JrR"/>
                                             </connections>
                                         </button>
                                     </subviews>
