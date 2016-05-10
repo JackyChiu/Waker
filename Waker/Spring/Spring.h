@@ -3,7 +3,7 @@
 //  Spring
 //
 //  Created by James Tang on 20/1/15.
-//  Copyright (c) 2015 Meng To. All rights reserved.
+//  Copyright (c) 2015 Meng To. 
 //
 
 #import <UIKit/UIKit.h>

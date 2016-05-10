@@ -10,7 +10,7 @@ import UIKit
 
 let dayInSeconds:Double = Double(60*60*24)
 
-public enum Weekdays{
+public enum Weekdays:Int{
     case Sun
     case Mon
     case Tue
@@ -18,12 +18,13 @@ public enum Weekdays{
     case Thu
     case Fri
     case Sat
+    /*
     func value()->Int{
         switch self{
             case .Sun:
                 return 0
             case .Mon:
-                    return 1
+                return 1
             case .Tue:
                 return 2
             case .Wed:
@@ -36,6 +37,7 @@ public enum Weekdays{
             return 6
         }
     }
+    */
 }
 
 public class Alarm: NSObject {
@@ -172,7 +174,7 @@ public class Alarm: NSObject {
         var smallestDifference = 6 // 6 is max difference of days to be apart //
         let currentWeekday = getWeekday(date)
         for weekday in repeatOnTheseWeekdays{
-            difference =  weekday.value() - currentWeekday
+            difference =  weekday.rawValue - currentWeekday
             if difference < 0{
                 difference += 7
             }
@@ -187,5 +189,5 @@ public class Alarm: NSObject {
 
 // List containing all of the alarms //
 var alarmList: [Alarm] = [
-    
+    Alarm(date: NSDate(), repeatOnTheseWeekdays: [Weekdays.Sun])
 ]

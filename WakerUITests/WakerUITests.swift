@@ -3,7 +3,7 @@
 //  WakerUITests
 //
 //  Created by Jacky Chiu on 2016-01-12.
-//  Copyright © 2016 Jacky Chiu. All rights reserved.
+//  Copyright © 2016 Jacky Chiu. 
 //
 
 import XCTest

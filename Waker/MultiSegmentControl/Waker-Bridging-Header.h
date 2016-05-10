@@ -3,7 +3,7 @@
 //  Waker
 //
 //  Created by Jacky Chiu on 2016-02-22.
-//  Copyright © 2016 Jacky Chiu. All rights reserved.
+//  Copyright © 2016 Jacky Chiu. 
 //
 
 #ifndef Waker_Bridging_Header_h

@@ -17,24 +17,22 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         //Transparent background to match background colour //
         cell.backgroundColor = UIColor(red: 3/255, green: 69/255, blue: 121/255, alpha: 0.7)
         
-        let alarm = alarmList[indexPath.row]
+        //let alarm = alarmList[indexPath.row]
         // Get alarmcell formatting and data //
-        cell.configureWithAlarmCell(alarm, row: indexPath.row)
+        //cell.configureWithAlarmCell(alarm, row: indexPath.row)
         cell.delegate = self
         
         return cell
     }
     
     override func viewDidLoad() {
-        //Sets background image //
-        let img = UIImage(named: "Background_big")
-        self.view.backgroundColor = UIColor(patternImage: img!)
-        
         // Sets row height //
         tableView.rowHeight = 90
+        
         // Listens for if tableview needs to reload //
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableData:", name: "reloadTableData", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "playAlarm:", name: "playAlarm", object: nil)
+        
         // Asks for premission to send notifications //
         let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)

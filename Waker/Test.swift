@@ -6,8 +6,11 @@
 //  Copyright © 2016 Jacky Chiu. All rights reserved.
 //
 
-import Cocoa
 
 class Test: UIViewController {
-
+    override func viewDidLoad() {
+        //Sets background image //
+        let img = UIImage(named: "Background_big")
+        self.view.backgroundColor = UIColor(patternImage: img!)
+    }
 }
