@@ -119,7 +119,7 @@ public class Alarm: NSObject {
             }))
             view.presentViewController(alert, animated: true, completion: nil)
             }
-        NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "snoozeAlarm", userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: #selector(Alarm.snoozeAlarm), userInfo: nil, repeats: false)
     }
     
     func snoozeAlarm(){

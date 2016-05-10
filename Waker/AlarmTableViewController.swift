@@ -30,8 +30,8 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         tableView.rowHeight = 90
         
         // Listens for if tableview needs to reload //
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableData:", name: "reloadTableData", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playAlarm:", name: "playAlarm", object: nil)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableData:", name: "reloadTableData", object: nil)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "playAlarm:", name: "playAlarm", object: nil)
         
         // Asks for premission to send notifications //
         let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)

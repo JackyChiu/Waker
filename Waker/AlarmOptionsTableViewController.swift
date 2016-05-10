@@ -39,7 +39,7 @@ class AlarmOptionsTableViewController: UITableViewController {
         self.tableView.layer.cornerRadius = 8
         
         // Listens for when user makes alarm //
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "addAlarm:", name: "addAlarm", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AlarmOptionsTableViewController.addAlarm(_:)), name: "addAlarm", object: nil)
     }
     
     // MARK: Misc

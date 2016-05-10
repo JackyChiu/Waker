@@ -63,7 +63,6 @@
         <!--Alarms-->
         <scene sceneID="msN-M7-Y79">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="11a-h7-Sbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="38h-ZW-jib" customClass="AlarmViewController" customModule="Waker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="unu-9T-Fub"/>
@@ -126,6 +125,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11a-h7-Sbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="861.5" y="-1255.5"/>
         </scene>
@@ -322,80 +322,6 @@
                                                 <action selector="closeButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="hXb-Pt-JrR"/>
                                             </connections>
                                         </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86D-VO-1vy" customClass="DesignableView" customModule="Waker" customModuleProvider="target">
-                                            <rect key="frame" x="25" y="504" width="162.5" height="40"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft0-e1-9sP" customClass="DesignableButton" customModule="Waker" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="162.5" height="40"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    <state key="normal" title="Cancel" image="noButton">
-                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="cancelButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="YYn-oP-Mcb"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" red="1" green="0.40291355117992411" blue="0.43716416134051939" alpha="0.88561422413793101" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="7Ac-2o-bov"/>
-                                                <constraint firstAttribute="width" constant="162.5" id="Vv4-qw-XoO"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ft0-e1-9sP" secondAttribute="trailing" id="dhP-90-lpI"/>
-                                                <constraint firstItem="Ft0-e1-9sP" firstAttribute="top" secondItem="86D-VO-1vy" secondAttribute="top" id="qL3-ca-qio"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ft0-e1-9sP" secondAttribute="bottom" id="qTb-CO-8aJ"/>
-                                                <constraint firstItem="Ft0-e1-9sP" firstAttribute="leading" secondItem="86D-VO-1vy" secondAttribute="leading" id="tB2-UX-nnW"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbf-Bm-RDL" customClass="DesignableView" customModule="Waker" customModuleProvider="target">
-                                            <rect key="frame" x="189" y="504" width="162.5" height="40"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anU-C1-QTP" customClass="DesignableButton" customModule="Waker" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="162.5" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="162.5" id="aAb-1l-0Fc"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    <state key="normal" title="Create" image="yesButton">
-                                                        <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="createAlarmButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="lek-Bx-rXk"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.61088781357835675" green="1" blue="0.51465394057601865" alpha="0.88561422413793101" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="anU-C1-QTP" secondAttribute="trailing" id="8dI-ho-7Fa"/>
-                                                <constraint firstAttribute="height" constant="40" id="OQ5-CJ-kIP"/>
-                                                <constraint firstItem="anU-C1-QTP" firstAttribute="top" secondItem="Hbf-Bm-RDL" secondAttribute="top" id="WNi-aH-3o7"/>
-                                                <constraint firstAttribute="bottom" secondItem="anU-C1-QTP" secondAttribute="bottom" id="Xyh-qr-fX4"/>
-                                                <constraint firstItem="anU-C1-QTP" firstAttribute="leading" secondItem="Hbf-Bm-RDL" secondAttribute="leading" id="u77-1w-CFm"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
                                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-CE-hVr">
                                             <rect key="frame" x="25" y="96" width="325" height="400"/>
                                             <constraints>
@@ -406,30 +332,68 @@
                                                 <segue destination="MTS-Pv-a9d" kind="embed" id="ijO-KZ-05C"/>
                                             </connections>
                                         </containerView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft0-e1-9sP" customClass="DesignableButton">
+                                            <rect key="frame" x="25" y="504" width="162.5" height="40"/>
+                                            <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="162.5" id="mfE-cU-E2k"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="161" id="vtO-gd-wCj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                            <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="Cancel" image="noButton">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="cancelButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="YYn-oP-Mcb"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anU-C1-QTP" userLabel="Create Button" customClass="DesignableButton">
+                                            <rect key="frame" x="189" y="504" width="161" height="40"/>
+                                            <color key="backgroundColor" red="0.30980392156862746" green="0.85490196078431369" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="161" id="xkJ-9p-6RV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                            <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="Create" image="yesButton">
+                                                <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="createAlarmButtonDidTouch:" destination="Wp2-nK-BLM" eventType="touchUpInside" id="lek-Bx-rXk"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Hbf-Bm-RDL" firstAttribute="leading" secondItem="86D-VO-1vy" secondAttribute="trailing" constant="1.5" id="6p7-l7-zAw"/>
-                                        <constraint firstItem="Hbf-Bm-RDL" firstAttribute="leading" secondItem="86D-VO-1vy" secondAttribute="trailing" constant="1.5" id="8Hd-GU-KuK"/>
-                                        <constraint firstItem="m8m-CE-hVr" firstAttribute="centerX" secondItem="mIV-rn-IYK" secondAttribute="centerX" id="CQi-E2-ecR"/>
-                                        <constraint firstItem="86D-VO-1vy" firstAttribute="leading" secondItem="mIV-rn-IYK" secondAttribute="leading" constant="25" id="KEM-iq-gji"/>
+                                        <constraint firstItem="Ft0-e1-9sP" firstAttribute="top" secondItem="m8m-CE-hVr" secondAttribute="bottom" constant="8" id="1bK-9e-dXK"/>
+                                        <constraint firstItem="anU-C1-QTP" firstAttribute="top" secondItem="m8m-CE-hVr" secondAttribute="bottom" constant="8" id="CDj-p3-moE"/>
+                                        <constraint firstItem="anU-C1-QTP" firstAttribute="width" secondItem="Ft0-e1-9sP" secondAttribute="width" id="HgO-4g-tYu"/>
                                         <constraint firstItem="m8m-CE-hVr" firstAttribute="centerX" secondItem="mIV-rn-IYK" secondAttribute="centerX" id="SJS-l3-Vfn"/>
-                                        <constraint firstAttribute="bottom" secondItem="Hbf-Bm-RDL" secondAttribute="bottom" constant="123" id="Sig-mN-Nb5"/>
-                                        <constraint firstItem="m8m-CE-hVr" firstAttribute="leading" secondItem="mIV-rn-IYK" secondAttribute="leading" constant="25" id="WWr-5b-cOj"/>
-                                        <constraint firstAttribute="trailing" secondItem="m8m-CE-hVr" secondAttribute="trailing" constant="25" id="XCK-HG-01A"/>
-                                        <constraint firstItem="m8m-CE-hVr" firstAttribute="top" secondItem="mIV-rn-IYK" secondAttribute="top" constant="96" id="YMR-hK-9HQ"/>
                                         <constraint firstAttribute="trailing" secondItem="m8m-CE-hVr" secondAttribute="trailing" constant="25" id="YQI-Ne-Xjd"/>
+                                        <constraint firstAttribute="bottom" secondItem="anU-C1-QTP" secondAttribute="bottom" constant="123" id="Yva-iE-p4z"/>
+                                        <constraint firstItem="Ft0-e1-9sP" firstAttribute="leading" secondItem="mIV-rn-IYK" secondAttribute="leading" constant="25" id="ZTy-O4-BPI"/>
+                                        <constraint firstItem="anU-C1-QTP" firstAttribute="height" secondItem="Ft0-e1-9sP" secondAttribute="height" id="ZZb-Td-H8W"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ft0-e1-9sP" secondAttribute="bottom" constant="123" id="fQT-ym-cYj"/>
                                         <constraint firstItem="m8m-CE-hVr" firstAttribute="leading" secondItem="mIV-rn-IYK" secondAttribute="leading" constant="25" id="kjD-Ca-qxC"/>
                                         <constraint firstItem="m8m-CE-hVr" firstAttribute="top" secondItem="mIV-rn-IYK" secondAttribute="top" constant="96" id="oeW-rb-mmM"/>
-                                        <constraint firstAttribute="bottom" secondItem="86D-VO-1vy" secondAttribute="bottom" constant="123" id="uhy-CW-1uE"/>
-                                        <constraint firstAttribute="trailing" secondItem="Hbf-Bm-RDL" secondAttribute="trailing" constant="23.5" id="zXK-7W-3hZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="anU-C1-QTP" secondAttribute="trailing" constant="25" id="s4T-0E-liZ"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="CQi-E2-ecR"/>
-                                            <exclude reference="WWr-5b-cOj"/>
-                                            <exclude reference="XCK-HG-01A"/>
-                                            <exclude reference="YMR-hK-9HQ"/>
-                                            <exclude reference="8Hd-GU-KuK"/>
+                                            <exclude reference="HgO-4g-tYu"/>
+                                            <exclude reference="ZZb-Td-H8W"/>
                                         </mask>
                                     </variation>
                                 </view>
@@ -445,11 +409,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cancelButton" destination="Ft0-e1-9sP" id="EOW-uJ-OVV"/>
-                        <outlet property="cancelView" destination="86D-VO-1vy" id="ncQ-vw-Bnk"/>
-                        <outlet property="createAlarmButton" destination="anU-C1-QTP" id="cfB-KB-2Fh"/>
-                        <outlet property="createAlarmView" destination="Hbf-Bm-RDL" id="bBd-1u-AAF"/>
-                        <outlet property="timePicker" destination="XQm-bk-CFe" id="Tbg-pd-Kc0"/>
+                        <outlet property="cancelButton" destination="Ft0-e1-9sP" id="gcW-hs-aDg"/>
+                        <outlet property="createButton" destination="anU-C1-QTP" id="UcJ-bN-iVv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jke-Dw-6gb" userLabel="First Responder" sceneMemberID="firstResponder"/>

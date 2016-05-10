@@ -3,7 +3,7 @@
 //  SpringApp
 //
 //  Created by Meng To on 2015-03-27.
-//  Copyright (c) 2015 Meng To. 
+//  Copyright (c) 2015 Meng To. All rights reserved.
 //
 
 import UIKit
