@@ -8,7 +8,7 @@ An alarm made for iOS built with Swift and in Xcode. The main idea of the applic
 - Weekday repeat options
 - Snooze functionality
 - Alarm goes off in foreground or background (There are limitations on this, planned to be improved)
-- Alarm goes off even when in "Do not Disturb mode"
+- Responsive design for all iOS screens
 
 ## Planned Feature
 - Sound alarm even in silent mode
@@ -18,7 +18,6 @@ An alarm made for iOS built with Swift and in Xcode. The main idea of the applic
 - Records your sleep duration and graphs it with other in the week
 - Notifies you when your amount of sleep has been going down
 - Gradually increase the sound of the alarm at the set time
-- Responsive design for all iOS screens
 
 ## Installation
 Mac:
