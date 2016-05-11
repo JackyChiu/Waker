@@ -8,24 +8,33 @@
 import UIKit
 import AVFoundation
 
-var audioPlayer = AVAudioPlayer()
-
-func playAudio() {
- 
-    let filePathToSound = NSBundle.mainBundle().pathForResource("bell", ofType: "mp3")
+class AudioPlayer: AVAudioPlayer {
     
-    if let alarmSound = filePathToSound{
+    static var audioPlayer = AVAudioPlayer()
+    var alarmSound:String
+    
+    init(alarmSound:String) {
+        self.alarmSound = alarmSound
+        super.init()
+    }
+    
+    static func playAudio() {
+        let filePathToSound = NSBundle.mainBundle().pathForResource("bell", ofType: "mp3")
         
-        let myFilePathURL = NSURL(fileURLWithPath: alarmSound)
-        do{
-            try audioPlayer = AVAudioPlayer(contentsOfURL: myFilePathURL)
-            audioPlayer.prepareToPlay()
-            audioPlayer.play()
+        if let soundFile = filePathToSound{
             
-        }catch
-        {
-            print("error")
+            let myFilePathURL = NSURL(fileURLWithPath: soundFile)
+            
+            do{
+                try audioPlayer = AVAudioPlayer(contentsOfURL: myFilePathURL)
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
+                
+            }catch{
+                print("Error locating sound file")
+            }
         }
     }
 }
 
+//var audioPlayer = AudioPlayer()

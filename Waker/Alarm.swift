@@ -10,7 +10,7 @@ import UIKit
 
 let dayInSeconds:Double = Double(60*60*24)
 
-public enum Weekdays:Int{
+enum Weekdays:Int{
     case Sun
     case Mon
     case Tue
@@ -18,28 +18,33 @@ public enum Weekdays:Int{
     case Thu
     case Fri
     case Sat
-    /*
-    func value()->Int{
-        switch self{
-            case .Sun:
-                return 0
-            case .Mon:
-                return 1
-            case .Tue:
-                return 2
-            case .Wed:
-                return 3
-            case .Thu:
-                return 4
-            case .Fri:
-                return 5
-            case .Sat:
-            return 6
-        }
-    }
-    */
 }
 
+class Alarm: NSObject {
+    var alarmDate: Date
+    let audioPlayer: AudioPlayer
+    
+    let alarmRepeats: Bool
+    let alarmSound: String
+    var repeatOnTheseWeekdays: [Weekdays]
+    var alarmIsOn: Bool = true
+    
+    init(alarmDate:Date, repeatOnTheseWeekdays:[Weekdays], alarmSound:String) {
+        self.alarmDate = alarmDate
+        self.repeatOnTheseWeekdays = repeatOnTheseWeekdays
+        self.alarmSound = alarmSound
+        self.audioPlayer = AudioPlayer(alarmSound: alarmSound)
+        
+        if repeatOnTheseWeekdays.count == 0 {
+            self.alarmRepeats = false
+        }
+        else{
+            self.alarmRepeats = true
+        }
+    }
+}
+
+/*
 public class Alarm: NSObject {
     public var date: NSDate
     public var hour: Int
@@ -185,9 +190,9 @@ public class Alarm: NSObject {
         return Double(smallestDifference)
     }
 
-}
+} */
 
 // List containing all of the alarms //
 var alarmList: [Alarm] = [
-    Alarm(date: NSDate(), repeatOnTheseWeekdays: [Weekdays.Sun])
 ]
+ 

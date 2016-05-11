@@ -13,4 +13,5 @@ class MenuViewController: UIViewController {
     @IBAction func closeButtonDidTouch(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
 }

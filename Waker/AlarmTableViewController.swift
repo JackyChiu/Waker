@@ -20,7 +20,7 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         //let alarm = alarmList[indexPath.row]
         // Get alarmcell formatting and data //
         //cell.configureWithAlarmCell(alarm, row: indexPath.row)
-        cell.delegate = self
+        //cell.delegate = self
         
         return cell
     }
@@ -38,9 +38,9 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
     }
     
+    /*
     func playAlarm(notification: NSNotification){
-        
-        playAudio()
+        audioPlayer.playAudio()
         
         // Default case //
         var currentAlarm: Alarm = alarmList[0]
@@ -57,10 +57,9 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
         currentAlarm.createAlert(self, currentAlarm: currentAlarm)
         
         tableView.reloadData()
-    }
-    
+    } 
+     
     //MARK: Misc
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int)->Int{
         // Returns the number of alarms //
         return alarmList.count
@@ -97,6 +96,7 @@ class AlarmTableViewController: UITableViewController, AlarmTableViewCellDelegat
             }
         }
     }
+ */
 
     // Segues to other screens //
     @IBAction func addAlarmButtonDidTouch(sender: AnyObject) {

@@ -21,7 +21,7 @@ class AlarmOptionsTableViewController: UITableViewController {
                         Weekdays.Thu,
                         Weekdays.Fri,
                         Weekdays.Sat]
-    
+    /*
     func addAlarm(notification:NSNotification){
         
         let date = datePicker.date
@@ -33,15 +33,15 @@ class AlarmOptionsTableViewController: UITableViewController {
         
         alarmList.append(Alarm(date: date, repeatOnTheseWeekdays: repeatOnTheseWeekdays))
     }
-    
+    */
     override func viewDidLoad() {
         // Gives view curved edges //
         self.tableView.layer.cornerRadius = 8
         
         // Listens for when user makes alarm //
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AlarmOptionsTableViewController.addAlarm(_:)), name: "addAlarm", object: nil)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AlarmOptionsTableViewController.addAlarm(_:)), name: "addAlarm", object: nil)
     }
-    
+ 
     // MARK: Misc
     // Allows for repeat options to pop in and out //
     @IBAction func repeatSwitchToggle(sender: AnyObject) {

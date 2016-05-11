@@ -12,7 +12,7 @@ protocol AlarmTableViewCellDelegate: class{
 }
 
 class AlarmTableViewCell: UITableViewCell {
-    
+    /*
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var ampmLabel: UILabel!
     @IBOutlet weak var weekdaysLabel: UILabel!
@@ -73,5 +73,5 @@ class AlarmTableViewCell: UITableViewCell {
         }
         
     }
-    
+    */
 }
